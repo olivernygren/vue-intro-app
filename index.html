@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/vue-logo.png" type="image/x-icon">
+  <title>Vue Boots Market</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2/dist/vue.js"></script> -->
+  <script defer src="app.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- <a :href="url" target="_blank">Link to website</a> -->
+
+    <div v-if="showBoots">
+      <ul>
+        <li v-for="boot in boots" :class="{ fav: boot.isFav }" @click="toggleFavs(boot)">
+          <img :src="boot.img" :alt="boot.title">
+          <div class="info">
+            <h3>{{ boot.title }}</h3>
+            <p>{{ boot.brand }}</p>
+            <p>{{ boot.price }} kr</p>
+            <span v-if="boot.isFav">👍</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <button @click="toggleShowBoots">
+      <span v-if="showBoots">Hide Boots</span>
+      <span v-else>Show Boots</span>
+    </button>
+
+    <!-- <br>
+
+    <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>
+    <div class="box" @mouseleave="handleEvent">mouseleave</div>
+    <div class="box" @dblclick="handleEvent">double click </div>
+    <div class="box" @mousemove="handleMouseMove">Position - {{ x }}, {{ y }}</div> -->
+
+
+  </div>
+</body>
+</html>
