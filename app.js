@@ -4,9 +4,9 @@ const app = Vue.createApp({
       url: 'https://olivernygrenweb.se/',
       showBoots: true,
       boots: [
-        { title: 'Green Boots', brand: 'Vagabond', img: './assets/green.jpg', isFav: true, price: 799 },
+        { title: 'Green Boots', brand: 'Vagabond', img: './assets/green.jpg', isFav: false, price: 799 },
         { title: 'Brown Boots', brand: 'Adidas', img: './assets/brown.jpg', isFav: false, price: 999 },
-        { title: 'Red Boots', brand: 'Louis Vuitton', img: './assets/red.jpg', isFav: true, price: 1299 }
+        { title: 'Red Boots', brand: 'Louis Vuitton', img: './assets/red.jpg', isFav: false, price: 1299 }
       ]
     }
   },
