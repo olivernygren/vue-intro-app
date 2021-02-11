@@ -5,16 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/vue-logo.png" type="image/x-icon">
-  <title>Vue Boots Market</title>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2/dist/vue.js"></script> -->
+  <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
   <script src="https://unpkg.com/vue@next"></script>
-  <link rel="stylesheet" href="style.css">
+  <title>Vue Boots Market</title>
 </head>
 <body>
   <div id="app">
 
-    <!-- <a :href="url" target="_blank">Link to website</a> -->
     <h2>Klicka på skorna du gillar mest för att lägga till i favoriter!</h2>
 
     <div v-if="showBoots">
@@ -35,14 +33,6 @@
       <span v-if="showBoots">Hide Boots</span>
       <span v-else>Show Boots</span>
     </button>
-
-    <!-- <br>
-
-    <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>
-    <div class="box" @mouseleave="handleEvent">mouseleave</div>
-    <div class="box" @dblclick="handleEvent">double click </div>
-    <div class="box" @mousemove="handleMouseMove">Position - {{ x }}, {{ y }}</div> -->
-
 
   </div>
 </body>

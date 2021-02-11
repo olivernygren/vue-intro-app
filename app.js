@@ -1,7 +1,6 @@
 const app = Vue.createApp({
   data() {
     return {
-      url: 'https://olivernygrenweb.se/',
       showBoots: true,
       boots: [
         { title: 'Green Boots', brand: 'Vagabond', img: './assets/green.jpg', isFav: false, price: 799 },
@@ -17,12 +16,7 @@ const app = Vue.createApp({
     toggleFavs(boot) {
       boot.isFav = !boot.isFav
     }
-  },
-  // computed: {
-  //   filteredBoots() {
-  //     return this.boots.filter((boot) => boot.isFav)
-  //   }
-  // }
+  }
 })
 
 app.mount('#app')
